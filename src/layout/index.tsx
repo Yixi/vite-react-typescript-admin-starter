@@ -3,6 +3,7 @@ import { Layout, theme } from 'antd'
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Menu from './Menu'
+import TabBar from './TabBar'
 
 const LayoutPage: React.FC = () => {
   const {
@@ -23,6 +24,7 @@ const LayoutPage: React.FC = () => {
       </Layout.Sider>
       <Layout>
         <Header />
+        <TabBar />
         <Layout.Content style={{ padding: '20px' }}>
           <Outlet />
         </Layout.Content>

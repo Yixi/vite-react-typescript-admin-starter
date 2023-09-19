@@ -82,8 +82,17 @@ const Menu: React.FC = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', alignItems: 'center', height: '60px' }}>
-        Logo
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          height: '64px',
+          justifyContent: 'center',
+          fontSize: '20px',
+          fontWeight: 'bold',
+        }}
+      >
+        Y-Admin
       </div>
       <AntMenu
         openKeys={openKeys}

@@ -14,19 +14,45 @@ export const routeConfig: RouteInfo[] = [
     },
   },
   {
-    path: 'list',
+    path: 'menu1',
     meta: {
       isMenu: true,
-      title: '列表',
+      title: 'menu1',
     },
     children: [
       {
         index: true,
-        path: 'table',
-        element: <div>table</div>,
+        path: 'menu1-1',
+        element: <div>menu1-1</div>,
         meta: {
           isMenu: true,
-          title: '表格',
+          title: 'menu1-1',
+        },
+      },
+    ],
+  },
+  {
+    path: 'menu2',
+    meta: {
+      isMenu: true,
+      title: 'menu2',
+    },
+    children: [
+      {
+        index: true,
+        path: 'menu2-1',
+        element: <div>menu2-1</div>,
+        meta: {
+          isMenu: true,
+          title: 'menu2-1',
+        },
+      },
+      {
+        path: 'menu2-2',
+        element: <div>menu2-2</div>,
+        meta: {
+          isMenu: true,
+          title: 'menu2-2',
         },
       },
     ],
