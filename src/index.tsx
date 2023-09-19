@@ -1,17 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/style.less'
+import { App, ConfigProvider } from 'antd'
+import dayjs from 'dayjs'
+import zhCN from 'antd/lib/locale/zh_CN'
+import 'dayjs/locale/zh-cn'
+import { RecoilRoot } from 'recoil'
+import { RouterProvider } from 'react-router-dom'
+import routes from './routes'
+import 'antd/dist/reset.css'
+
+dayjs.locale('zh-cn')
 
 const root = createRoot(document.getElementById('app'))
 
-const APP: React.FC = () => {
-  const [count, setCount] = useState(0)
-  return (
-    <>
-      <div>{count}</div>
-      <button onClick={() => setCount((prev) => prev + 1)}>Plus</button>
-    </>
-  )
-}
-
-root.render(<APP />)
+root.render(
+  <ConfigProvider locale={zhCN}>
+    <RecoilRoot>
+      <App>
+        <RouterProvider router={routes} />
+      </App>
+    </RecoilRoot>
+  </ConfigProvider>,
+)
