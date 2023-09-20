@@ -3,6 +3,7 @@ import App from '@root/pages/App'
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 import { RouteInfo } from '@root/types/base'
 import Home from '@root/pages/Home'
+import { HomeOutlined } from '@ant-design/icons'
 
 export const routeConfig: RouteInfo[] = [
   {
@@ -11,6 +12,7 @@ export const routeConfig: RouteInfo[] = [
     meta: {
       isMenu: true,
       title: '首页',
+      icon: <HomeOutlined />,
     },
   },
   {

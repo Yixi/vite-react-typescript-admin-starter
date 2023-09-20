@@ -5,7 +5,7 @@ import { find, findIndex, last, map } from 'lodash'
 import React, { useEffect, useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import styles from './index.module.less'
-import { CloseOutlined } from '@ant-design/icons'
+import { CloseOutlined, ProjectOutlined } from '@ant-design/icons'
 import { RouteInfo } from '@root/types/base'
 
 const TabBar = () => {
@@ -22,15 +22,11 @@ const TabBar = () => {
   }, [routeConfig])
 
   const onRemoveTab = (pathname: string) => {
-    // console.log(pathname)
-    // console.log(tabs)
     const tabIndex = findIndex(tabs, { pathname: pathname })
-    // console.log(tabIndex)
     const newTabs = tabs.filter((tab) => tab.pathname !== pathname)
     setTabs(newTabs)
 
     if (pathname === location.pathname) {
-      // console.log(newTabs)
       let nextTab = newTabs[tabIndex]
       if (!nextTab) {
         nextTab = last(newTabs)
@@ -56,6 +52,7 @@ const TabBar = () => {
       key: tab.pathname,
       label: (
         <Space>
+          {tab.route?.meta?.icon || <ProjectOutlined />}
           <span>{tab.route?.meta?.title || ''}</span>
           <CloseOutlined
             className={styles.close}

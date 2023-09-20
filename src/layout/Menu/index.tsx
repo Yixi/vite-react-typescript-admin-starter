@@ -64,9 +64,11 @@ const Menu: React.FC = () => {
       return {
         key,
         label: item?.meta?.title,
+        icon: item?.meta?.icon,
         children: item.children?.map((child: RouteInfo) => ({
           key: child.path,
           label: child?.meta?.title,
+          icon: item?.meta?.icon,
         })),
       }
     })
