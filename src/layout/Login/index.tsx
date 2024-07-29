@@ -1,11 +1,11 @@
 import { LoginFormPage, ProFormText } from '@ant-design/pro-components'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import React from 'react'
-import { useSetRecoilState } from 'recoil'
+import { useSetAtom } from 'jotai'
 import { userInfoState } from '@root/store/user'
 
 const LoginPage: React.FC = () => {
-  const setUserInfoState = useSetRecoilState(userInfoState)
+  const setUserInfoState = useSetAtom(userInfoState)
 
   const onLogin = (formValue: { username: string; password: string }) => {
     if (formValue.username === 'admin' && formValue.password === '123456') {

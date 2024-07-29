@@ -5,7 +5,6 @@ import { App, ConfigProvider } from 'antd'
 import dayjs from 'dayjs'
 import zhCN from 'antd/lib/locale/zh_CN'
 import 'dayjs/locale/zh-cn'
-import { RecoilRoot } from 'recoil'
 import { RouterProvider } from 'react-router-dom'
 import routes from './routes'
 import 'antd/dist/reset.css'
@@ -16,10 +15,8 @@ const root = createRoot(document.getElementById('app'))
 
 root.render(
   <ConfigProvider locale={zhCN}>
-    <RecoilRoot>
-      <App>
-        <RouterProvider router={routes} />
-      </App>
-    </RecoilRoot>
+    <App>
+      <RouterProvider router={routes} />
+    </App>
   </ConfigProvider>,
 )

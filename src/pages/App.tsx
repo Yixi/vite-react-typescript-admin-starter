@@ -2,10 +2,10 @@ import Layout from '@root/layout'
 import Login from '@root/layout/Login'
 import { userInfoState } from '@root/store/user'
 import React from 'react'
-import { useRecoilValue } from 'recoil'
+import { useAtomValue } from 'jotai'
 
 const App: React.FC = () => {
-  const isLogin = useRecoilValue(userInfoState)
+  const isLogin = useAtomValue(userInfoState)
 
   if (isLogin) {
     return <Layout />

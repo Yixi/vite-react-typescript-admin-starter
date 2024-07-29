@@ -1,6 +1,3 @@
-import { atom } from 'recoil'
+import { atom } from 'jotai'
 
-export const userInfoState = atom({
-  key: 'userInfoState',
-  default: false,
-})
+export const userInfoState = atom(false)
