@@ -1,15 +1,15 @@
 import { LoginFormPage, ProFormText } from '@ant-design/pro-components'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import React from 'react'
-import { useSetAtom } from 'jotai'
-import { userInfoState } from '@root/store/user'
+import Auth from '@root/utils/auth'
 
 const LoginPage: React.FC = () => {
-  const setUserInfoState = useSetAtom(userInfoState)
-
   const onLogin = (formValue: { username: string; password: string }) => {
     if (formValue.username === 'admin' && formValue.password === '123456') {
-      setUserInfoState(true)
+      Auth.setToken('Y-Admin-Token')
+      setTimeout(() => {
+        window.location.reload()
+      }, 1000)
     }
     return Promise.resolve()
   }
