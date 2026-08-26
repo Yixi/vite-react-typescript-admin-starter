@@ -15,11 +15,11 @@
 ## 开发命令
 
 ```bash
-yarn dev        # 启动开发服务器（端口 8800）
-yarn build      # 构建生产版本
-yarn test       # 运行 Jest 测试
-yarn lint       # 运行 ESLint 检查
-yarn typecheck  # 运行 TypeScript 类型检查
+pnpm dev        # 启动开发服务器（端口 8880）
+pnpm build      # 构建生产版本
+pnpm test       # 运行 Jest 测试
+pnpm lint       # 运行 ESLint 检查
+pnpm typecheck  # 运行 TypeScript 类型检查
 ```
 
 ## 项目结构约定
@@ -147,9 +147,9 @@ export default MyComponent
 
 ## 验证代码
 
-- **不要使用 `yarn dev` 启动开发服务器**
-- **使用 `yarn build` 检查代码正确性**
-- 提交前运行 `yarn lint` 和 `yarn typecheck`
+- **不要使用 `pnpm dev` 启动开发服务器**
+- **使用 `pnpm build` 检查代码正确性**
+- 提交前运行 `pnpm lint` 和 `pnpm typecheck`
 - Git hooks (husky) 会自动执行检查
 
 ## 配置文件说明

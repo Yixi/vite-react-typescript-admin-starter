@@ -4,12 +4,12 @@
 
 ## 开发命令
 
-- `yarn dev` - 启动开发服务器（端口 8800）
-- `yarn build` - 构建生产版本
-- `yarn test` - 运行 Jest 测试
-- `yarn lint` - 运行 ESLint 检查
-- `yarn typecheck` - 运行 TypeScript 类型检查
-- `yarn prepare` - 设置 husky git hooks
+- `pnpm dev` - 启动开发服务器（端口 8880）
+- `pnpm build` - 构建生产版本
+- `pnpm test` - 运行 Jest 测试
+- `pnpm lint` - 运行 ESLint 检查
+- `pnpm typecheck` - 运行 TypeScript 类型检查
+- `pnpm prepare` - 设置 husky git hooks
 
 ## 组件库
 
@@ -72,4 +72,4 @@ import Component from '@root/components/Component'
 - /src/components 下存放全局可复用组件
 - 小范围模块的可复用组件可以放在对应页面目录下, 例如 /src/pages/order/components 下的组件可以提供给 /src/pages/order 下的其他页面使用
 - doc 中文件按模块归纳的响应的业务描述和设计图api请求等内容
-- 不用启动yarn dev，可以通过build来检查代码的正确性
+- 不用启动pnpm dev，可以通过build来检查代码的正确性

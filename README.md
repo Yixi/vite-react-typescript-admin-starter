@@ -3,9 +3,9 @@
 
 #### dev
 
-`yarn dev`
+`pnpm dev`
 
 
 #### build
 
-`yarn build`
+`pnpm build`
