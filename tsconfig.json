@@ -1,23 +1,22 @@
 {
   "compilerOptions": {
     "isolatedModules": true,
-    "baseUrl": ".",
     "paths": {
       "@root/*": [
-        "src/*"
+        "./src/*"
       ],
     },
+    "rootDir": ".",
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
+    "strictNullChecks": false,
     "lib": [
-      "es6",
-      "es7",
+      "es2020",
       "dom",
       "dom.iterable",
-      "es2019",
     ],
-    "target": "es5",
+    "target": "es2020",
     "jsx": "react",
     "allowJs": true,
     "experimentalDecorators": true,
