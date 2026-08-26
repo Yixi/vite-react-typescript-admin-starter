@@ -3,13 +3,24 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => ({
-  esbuild: {
-    drop: mode !== 'development' ? ['console', 'debugger'] : [],
+  build: {
+    rolldownOptions: {
+      output: {
+        minify:
+          mode !== 'development'
+            ? {
+                mangle: true,
+                compress: { dropConsole: true, dropDebugger: true },
+                codegen: true,
+              }
+            : undefined,
+      },
+    },
   },
   plugins: [react()],
   resolve: {
     alias: {
-      '@root/': `${path.resolve(__dirname, 'src')}/`,
+      '@root/': `${path.resolve(import.meta.dirname, 'src')}/`,
     },
   },
   server: {

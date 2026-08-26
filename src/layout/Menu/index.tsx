@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo } from 'react'
 import { Menu as AntMenu } from 'antd'
+import type { MenuProps } from 'antd'
 import { routeConfig } from '@root/routes'
 import { RouteInfo } from '@root/types/base'
 import { isNil, reduce, uniq } from 'lodash'
 import { matchPath, useLocation, useNavigate } from 'react-router-dom'
-import { MenuProps } from 'antd/lib'
 
 const Menu: React.FC = () => {
   const location = useLocation()
